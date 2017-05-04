@@ -2,10 +2,8 @@ import RPi.GPIO as GPIO
 import time
 import New_Read
 last_open_time = time.time() - 25
-# Assign Button  ////////////////////////////////////////
-# button = 24
+
 GPIO.setmode(GPIO.BOARD)
-# GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 #  Assign READY light   ////////////////////////////////
 GPIO.setup(3, GPIO.OUT)
 GPIO.output(3, False)
@@ -79,7 +77,6 @@ def work_the_lock(target_status):
     else:
         print("-------------Servo OFF - DONE")
 # ////////////////////////////////////////////
-# cam = False
 try:
     while True:
         if time.time() - last_open_time > cool_down:
@@ -92,7 +89,3 @@ except KeyboardInterrupt:
     GPIO.cleanup()
     print ('program stopped')
 
-# cd /
-# cd home/pi
-# sudo pigpiod
-# python Unlocker.py
