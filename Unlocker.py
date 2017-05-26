@@ -4,13 +4,11 @@ import New_Read
 last_open_time = time.time() - 25
 
 GPIO.setmode(GPIO.BOARD)
-#  Assign READY light   ////////////////////////////////
+
 GPIO.setup(3, GPIO.OUT)
 GPIO.output(3, False)
 # /////////////////////////////////////////
 def move_to(out_num, set_value, wait_time):
-        #for i in range(wait_time*interval):
-
         pi.set_servo_pulsewidth(out_num, set_value)
         time.sleep(wait_time)
         return
@@ -26,14 +24,18 @@ def input_changed(input_state):
                 prev_state = input_state
                 return True
         return False
+
 #   ASSIGN SERVO TO 4 and 18  /////////////////////////////////////
 took_pic = 0
 
 import pigpio
 pi = pigpio.pi()
 
-pi.set_mode(4, pigpio.OUTPUT)
-pi.set_mode(18, pigpio.OUTPUT)
+servo1 = 4  # Servo Arm
+servo2 = 18   # Servo Twist
+
+pi.set_mode(servo1, pigpio.OUTPUT)
+pi.set_mode(servo2, pigpio.OUTPUT)
 # ////////////////////////////////////////////
 grip_low = 580  # 530
 grip_mid = 1360
@@ -42,8 +44,7 @@ grip_high = 2170  # 2200
 arm_lo = 550
 arm_hi = 1970
 
-servo1 = 4  # Servo Arm
-servo2 = 18   # Servo Twist
+
 wait_period = 1.5  # 0.25
 wait_period2 = wait_period * 2  # 0.5
 wait_period_short = 1
