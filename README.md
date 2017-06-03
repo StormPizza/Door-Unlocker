@@ -7,4 +7,4 @@ The door unlocker is setup so that when someone taps an access card on the RFID 
 
 <img src="https://github.com/StormPizza/Door-Unlocker/blob/master/images-videos/good_copt2.gif" width="340" title="Door-Unlocker-Complete-Cycle" alt="Raspberry Pi Door Unlocker with RFID Reader" >
 
-
+Some requirements of this project included the fact that Door Unlocker must always be on (Not shown in the image) and the Door Unlocker must not normally cover or obstruct access to the door lock.
