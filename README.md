@@ -7,4 +7,10 @@ The door unlocker is setup so that when someone taps an access card on the RFID 
 
 <img src="https://github.com/StormPizza/Door-Unlocker/blob/master/images-videos/good_copt2.gif" width="340" title="Door-Unlocker-Complete-Cycle" alt="Raspberry Pi Door Unlocker with RFID Reader" >
 
-Some requirements of this project included the fact that Door Unlocker must always be on (Not shown in the image) and that the Door Unlocker must not normally cover or obstruct access to the door lock. Even though this complicated the design of the Door Unlocker, it was important that this merely adds an additional way to unlock the door as opposed to restricting locking and unlocking to only one mode as with other types of door unlockers.
+Some very important requirements in the making of this project was the fact that Door Unlocker must always be on (Not shown in the image) 
+
+and that the Door Unlocker must not normally cover or obstruct access to the door lock. This means that as much as it would have been easier to keep the servo-powered twisting-gripper on the lock handle at all times, this was not allowed. The gripper must move away from the lock handle, which is why the swinging arm is there.
+
+The reason for this seemingly unnecessary restriction was because it was important that this mechanism merely adds an additional way to unlock the door as opposed to restricting locking and unlocking to only one mode as with other types of door unlockers.
+
+Furthermore, another requirement was that no permanent modifications be done to the door being used, hence the use of cardboard, foamboard and wood in its construction, as these materials are light enough so that the entire mechanism could be confidently fastened to the door with removable Command adhesive strips.
